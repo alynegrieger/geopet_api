@@ -50,7 +50,7 @@ public class AnimalServiceImpl implements AnimalService {
 	@Override
 	public Animal updateAnimal(Animal animal, Long id) {
 		AnimalEntity animalEntity = this.repositorySpec.findAnimalById(id);
-		BeanUtils.copyProperties(animal, animalEntity);
+		BeanUtils.copyProperties(animal, animalEntity, "id");
 		this.repository.save(animalEntity);
 		BeanUtils.copyProperties(animalEntity, animal);
 		return animal;

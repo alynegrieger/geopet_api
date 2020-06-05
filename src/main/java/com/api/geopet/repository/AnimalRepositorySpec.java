@@ -1,7 +1,10 @@
 package com.api.geopet.repository;
 
+
+
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
+import javax.persistence.NonUniqueResultException;
 import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +27,8 @@ public class AnimalRepositorySpec {
 			return query.getSingleResult();
 		} catch (NoResultException e) {
 			throw new NoResultException("Não foram encontrados resultados");
+		}catch(NonUniqueResultException e) {
+			throw new NonUniqueResultException("Foram encontrados mais de um registro");
 		}
 	}
 
