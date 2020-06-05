@@ -10,6 +10,7 @@ import javax.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.api.geopet.config.exception.AnimalNotFoundException;
 import com.api.geopet.model.AnimalEntity;
 
 @Repository
@@ -26,7 +27,7 @@ public class AnimalRepositorySpec {
 			query.setParameter("id", id);
 			return query.getSingleResult();
 		} catch (NoResultException e) {
-			throw new NoResultException("Não foram encontrados resultados");
+			throw new AnimalNotFoundException("Id: " + id.toString());
 		}catch(NonUniqueResultException e) {
 			throw new NonUniqueResultException("Foram encontrados mais de um registro");
 		}
