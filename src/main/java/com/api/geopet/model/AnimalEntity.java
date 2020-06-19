@@ -37,10 +37,10 @@ public class AnimalEntity {
 	private Long id;
 
 	@Column(name = "lat")
-	private Integer lat;
+	private String lat;
 
 	@Column(name = "lng")
-	private Integer lng;
+	private String lng;
 
 	@Column(name = "species")
 	private AnimalSpecies species;

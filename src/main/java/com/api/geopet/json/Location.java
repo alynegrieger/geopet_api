@@ -14,9 +14,9 @@ public class Location implements Serializable {
 	private static final long serialVersionUID = -6474523098271357888L;
 
 	@Column(name = "lat")
-	private Integer lat;
+	private String lat;
 
 	@Column(name = "lng")
-	private Integer lng;
+	private String lng;
 
 }
