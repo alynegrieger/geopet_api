@@ -1,4 +1,4 @@
-<h1>Projeto Multidiscplinar Integrador (PMI) - GEOPET</h1>
+<h1>Projeto Multidisciplinar Integrador (PMI) - GEOPET</h1>
 
 Esse repositório contêm o código da API (backend) para a versão final do PMI do curso de Análise e Desenvolvimento de Sistemas da Faculdade CESUSC. O repositório do front-end pode ser encontrado <a href="https://github.com/lucazpinheiro/pmi-final">aqui</a>.
 
